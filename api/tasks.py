@@ -13,9 +13,8 @@ def get_reaction_value(post, react_type):
 
 
 @shared_task
-def scrape_posts():
+def scrape_posts(page):
     fb_posts = []
-    page = 'samatv.net'
     for post in get_posts(page, pages=20000, extra_info=True, timeout=60):
         fb_post = FacebookPost(
             page_name=page,
