@@ -1,4 +1,3 @@
-from celery import shared_task
 from django.utils.timezone import make_aware
 
 from facebook_scraper import get_posts
@@ -12,7 +11,6 @@ def get_reaction_value(post, react_type):
         return 0
 
 
-@shared_task
 def scrape_posts():
     fb_posts = []
     page = 'samatv.net'

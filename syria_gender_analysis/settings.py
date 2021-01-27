@@ -41,6 +41,10 @@ CELERY_BROKER_URL = env('REDIS_URL')
 
 ALLOWED_HOSTS = []
 
+# Scraping Variables
+FACEBOOK_SCRAPE_USERNAME = env('FACEBOOK_SCRAPE_USERNAME')
+FACEBOOK_SCRAPE_PASS = env('FACEBOOK_SCRAPE_PASS')
+
 
 # Application definition
 
@@ -134,4 +138,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Activate Django-Heroku.
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
